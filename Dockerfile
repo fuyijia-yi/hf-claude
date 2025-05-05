@@ -7,11 +7,11 @@ ENV DEBIAN_FRONTEND=noninteractive
 # 设置工作目录
 WORKDIR /app
 
-# 更新包列表并安装 wget 和 unzip，然后下载、解压、设置权限并清理
+# 更新包列表并安装 wget, unzip 和 ca-certificates，然后下载、解压、设置权限并清理
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends wget unzip && \
+    apt-get install -y --no-install-recommends wget unzip ca-certificates && \
     # 下载指定版本的 fuclaude 压缩包
-    wget --no-check-certificate -O fuclaude.zip https://github.com/wozulong/fuclaude/releases/download/v0.3.9/fuclaude-v0.3.9-linux-amd64-cb5c08c.zip && \
+    wget -O fuclaude.zip https://github.com/wozulong/fuclaude/releases/download/v0.3.9/fuclaude-v0.3.9-linux-amd64-cb5c08c.zip && \
     # 使用密码解压压缩包到当前目录 (/app)
     unzip -P linux.do fuclaude.zip && \
     # 删除不再需要的压缩包
