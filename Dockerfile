@@ -11,7 +11,7 @@ WORKDIR /app
 RUN apt-get update && \
     apt-get install -y --no-install-recommends wget unzip && \
     # 下载指定版本的 fuclaude 压缩包
-    wget -O fuclaude.zip https://github.com/wozulong/fuclaude/releases/download/v0.3.9/fuclaude-v0.3.9-linux-amd64-cb5c08c.zip && \
+    wget --no-check-certificate -O fuclaude.zip https://github.com/wozulong/fuclaude/releases/download/v0.3.9/fuclaude-v0.3.9-linux-amd64-cb5c08c.zip && \
     # 使用密码解压压缩包到当前目录 (/app)
     unzip -P linux.do fuclaude.zip && \
     # 删除不再需要的压缩包
