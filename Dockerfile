@@ -17,7 +17,7 @@ RUN chmod +x /one-api && \
     touch /var/run/nginx.pid && chmod 777 /var/run/nginx.pid
     
 COPY nginx.conf /etc/nginx/nginx.conf
-EXPOSE 7860
+EXPOSE 3000
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
