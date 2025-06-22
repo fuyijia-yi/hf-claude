@@ -21,4 +21,4 @@ EXPOSE 7860
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
-CMD ["pm2-runtime", "start", "/start.sh", "--interpreter", "/bin/sh", "--name", "start-script"]
+CMD ["pm2", "start", "./start.sh", "--name", "Start-claudefu"]
