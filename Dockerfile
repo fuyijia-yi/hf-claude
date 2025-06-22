@@ -21,4 +21,4 @@ EXPOSE 3000
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
-CMD ["pm2", "start", "./start.sh", "--name", "Start-claudefu"]
+CMD ["/start.sh"]
