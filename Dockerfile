@@ -8,7 +8,7 @@ WORKDIR /data
 # Install Node.js and pm2
 RUN apk add --no-cache nodejs npm && \
     npm install -g pm2
-
+    
 RUN chmod +x /one-api && \
     mkdir -p /data && chmod 777 /data  && \
     mkdir -p logs && chmod 777 logs   && \
