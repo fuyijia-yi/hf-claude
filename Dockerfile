@@ -9,7 +9,7 @@ WORKDIR /data
 RUN apk add --no-cache nodejs npm && \
     npm install -g pm2
     
-RUN chmod +x /one-api && \
+RUN chmod +x /new-api && \
     mkdir -p /data && chmod 777 /data  && \
     mkdir -p logs && chmod 777 logs   && \
     chmod 777 /var/cache/nginx && \
