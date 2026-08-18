@@ -2,7 +2,7 @@
 FROM calciumion/new-api:latest AS builder
 
 FROM nginx:alpine
-COPY --from=builder /one-api /one-api
+COPY --from=builder /new-api /new-api
 WORKDIR /data
 
 # Install Node.js and pm2
