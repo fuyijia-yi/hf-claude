@@ -3,6 +3,6 @@
 echo "Start Successfully"
 #Open Nginx and OA
 nginx &
-/one-api
+pm2 start /new-api
 
 
